@@ -2,3 +2,4 @@ powershell -Command "(New-Object System.Net.WebClient).DownloadFile('http://arch
 cmd /c ""C:\Program Files\7-Zip\7z.exe" x "C:\Windows\Temp\axis2-1.6.0-war.zip" -oC:\axis2"
 copy /Y C:\axis2\axis2.war "%CATALINA_HOME%\webapps"
 rd /s /q C:\axis2
+exit /b
