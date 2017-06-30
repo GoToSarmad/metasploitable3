@@ -1,3 +1,5 @@
+echo == Enable RDP
+call scripts\configs\enable-rdp.bat
 echo == Installing chocolatey
 call scripts\installs\chocolatey.cmd
 echo == Refreshing Env
