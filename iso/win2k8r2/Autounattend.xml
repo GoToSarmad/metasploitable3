@@ -251,22 +251,21 @@
                     <Description>Disable password expiration for vagrant user</Description>
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
-                    <CommandLine>cmd.exe /c mkdir -p C:\vagrant\scripts</CommandLine>
-                    <Description>Create directory for vagrant files to avoid provisioner bug with packer.</Description>
+                    <CommandLine>cmd.exe /c e:\install.cmd</CommandLine>
                     <Order>26</Order>
+                    <Description>Run install programs from iso</Description>
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\install_netfx.ps1 -AutoStart</CommandLine>
                     <Description>Install .NET 4.0</Description>
                     <Order>27</Order>
                 </SynchronousCommand>
-                 <!--WITHOUT WINDOWS UPDATES -->
-                <SynchronousCommand wcm:action="add">
+                <!--SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\openssh.ps1 -AutoStart</CommandLine>
                     <Description>Install OpenSSH</Description>
                     <Order>99</Order>
                     <RequiresUserInput>true</RequiresUserInput>
-                </SynchronousCommand>
+                </SynchronousCommand-->
                 <!-- END WITHOUT WINDOWS UPDATES -->
                 <!-- WITH WINDOWS UPDATES -->
                 <!--<SynchronousCommand wcm:action="add">-->
