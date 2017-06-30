@@ -10,4 +10,4 @@ sc config "MEDCServerComponent-Apache" obj= "NT Authority\LOCAL SERVICE" type= o
 net start "MEDC Server Component - Apache"
 net start "MEDC Server Component - Notification Server"
 net start "ManageEngine Desktop Central Server"
-
+exit /b
