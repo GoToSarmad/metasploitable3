@@ -1,0 +1,17 @@
+#!/bin/bash -x
+set -euo pipefail
+
+base="$(basename *.ovf .ovf)"
+
+rm -f "*.mf"
+
+for f in "$base".ovf \
+	*.vmdk; do
+	echo "SHA1 ($f)= $(sha1sum < "$f" | awk '{print $1}')";
+done \
+> "$base".mf
+sed -i "/$base.mf/d" "$base.mf"
+tar -cvf "../$base.ova" -- \
+	"$base".ovf \
+	*.vmdk \
+	#"$base".mf
