@@ -1,4 +1,4 @@
-copy /Y E:\resources\rails_server\gemrc C:\Users\vagrant\.gemrc
+copy /Y D:\resources\rails_server\gemrc C:\Users\vagrant\.gemrc
 
 cmd /C "C:\tools\ruby23\bin\gem.cmd install rails -v '4.1.1' --no-ri --no-rdoc"
 cmd /C "C:\tools\ruby23\bin\gem.cmd install rake -v '11.3.0' --no-ri --no-rdoc"
@@ -26,6 +26,6 @@ cmd /C C:\tools\ruby23\bin\gem.cmd install binding_of_caller -v '0.7.2' --no-ri 
 cmd /C C:\tools\ruby23\bin\gem.cmd install web-console -v '2.1.2' --no-ri --no-rdoc
 cmd /C C:\tools\ruby23\bin\gem.cmd install minitest -v '5.9.1' --no-ri --no-rdoc
 
-copy /Y E:\resources\rails_server\sqlite3-1.3.11-x64-mingw32.gemspec C:\tools\ruby23\lib\ruby\gems\2.3.0\specifications
+copy /Y D:\resources\rails_server\sqlite3-1.3.11-x64-mingw32.gemspec C:\tools\ruby23\lib\ruby\gems\2.3.0\specifications
 C:\tools\ruby23\bin\rails.bat _4.1.1_ new "C:\Program Files\Rails_Server"
 exit /b
