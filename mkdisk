@@ -1,0 +1,4 @@
+#!/bin/bash
+qemu-img create -f qcow2 Metasploitable3-disk002.qcow2 10737418240
+kvm -drive file=Metasploitable3-disk001.vmdk,if=scsi,unit=0 -drive file=Metasploitable3-disk002.qcow2,if=scsi,unit=1 -cdrom ../metasploitable3.iso -m 1024
+qemu-img convert Metasploitable3-disk002.qcow2 -O vmdk -o subformat=streamOptimized Metasploitable3-disk002.vmdk
