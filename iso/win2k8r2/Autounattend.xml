@@ -263,6 +263,8 @@
                     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File d:\scripts\install_wmf.ps1 -AutoStart</CommandLine>
                     <Order>98</Order>
                     <Description>Installing Windows Management Framework 5.0</Description>
+                </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c D:\install.cmd</CommandLine>
                     <Order>27</Order>
                     <Description>Run install programs from iso</Description>
